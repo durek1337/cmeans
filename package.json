@@ -1,0 +1,30 @@
+{
+  "name": "cmeans",
+  "version": "1.0.0",
+  "description": "Calculating clusters with C-means algorithm",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durek1337/cmeans.git"
+  },
+  "keywords": [
+    "cmeans",
+    "clustering"
+  ],
+  "author": "Dominik Höltgen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/durek1337/cmeans/issues"
+  },
+  "homepage": "https://github.com/durek1337/cmeans#readme",
+  "dependencies": {
+    "euclidean-distance": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/euclidean-distance": "^1.0.0"
+  }
+}
