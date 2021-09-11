@@ -7,7 +7,7 @@ interface DataObject {
 }
 interface ClusterResults {
     centroids: number[][];
-    membershipMatrix: typeof Matrix;
+    membershipMatrix: Matrix;
 }
 export type { DataObject, ClusterResults };
 export default function ({ k, vectors, epsilon, fuzziness }: Partial<DataObject>): ClusterResults;

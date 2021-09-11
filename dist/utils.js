@@ -30,15 +30,29 @@ function multiplyVectorByValue(value, vec) {
     return v;
 }
 exports.multiplyVectorByValue = multiplyVectorByValue;
-function Matrix(rows, cols) {
-    this.rows = rows;
-    this.cols = cols;
-    this.mtx = new Array(rows);
-    for (var i = 0; i < rows; i++) {
-        var row = new Array(cols);
-        for (var j = 0; j < cols; j++)
-            row[j] = 0;
-        this.mtx[i] = row;
+class Matrix {
+    constructor(rows, cols) {
+        this.rows = rows;
+        this.cols = cols;
+        this.mtx = new Array(rows);
+        for (var i = 0; i < rows; i++) {
+            var row = new Array(cols);
+            for (var j = 0; j < cols; j++)
+                row[j] = 0;
+            this.mtx[i] = row;
+        }
+    }
+    copy() {
+        var duplicate = new Matrix(this.rows, this.cols);
+        for (var i = 0; i < this.rows; i++)
+            duplicate.mtx[i] = this.mtx[i].slice(0);
+        return duplicate;
+    }
+    toString() {
+        var lines = [];
+        for (var i = 0; i < this.rows; i++)
+            lines.push(this.mtx[i].join('\t'));
+        return lines.join('\n');
     }
 }
 exports.Matrix = Matrix;
