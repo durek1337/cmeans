@@ -23,7 +23,11 @@ export function multiplyVectorByValue(value, vec) {
   return v;
 }
 
-export function Matrix(rows, cols) {
+export class Matrix {
+  public rows:number
+  public cols:number
+  public mtx:number[][]
+  constructor(rows,cols){
     this.rows = rows;
     this.cols = cols;
     this.mtx = new Array(rows);
@@ -33,6 +37,18 @@ export function Matrix(rows, cols) {
       for (var j = 0; j < cols; j++) row[j] = 0;
       this.mtx[i] = row;
     }
+  }
+  public copy():Matrix{
+    var duplicate = new Matrix(this.rows, this.cols);
+    for (var i = 0; i < this.rows; i++) duplicate.mtx[i] = this.mtx[i].slice(0);
+    return duplicate;
+  }
+  public toString():string {
+    var lines = [];
+     for (var i = 0; i < this.rows; i++) lines.push(this.mtx[i].join('\t'));
+     return lines.join('\n');
+  }
+
   }
 
 export function getRandomVectors(k, vectors) {

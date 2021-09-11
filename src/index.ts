@@ -13,7 +13,7 @@ interface DataObject {
 
 interface ClusterResults {
   centroids : number[][],
-  membershipMatrix : typeof Matrix
+  membershipMatrix : Matrix
 }
 
 export type {DataObject, ClusterResults}
