@@ -16,7 +16,7 @@ interface ClusterResults {
   membershipMatrix : typeof Matrix
 }
 
-
+export type {DataObject, ClusterResults}
 
 export default function({k, vectors, epsilon, fuzziness}:Partial<DataObject>):ClusterResults{
   var membershipMatrix = new Matrix(vectors.length, k);
