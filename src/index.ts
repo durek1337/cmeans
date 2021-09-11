@@ -18,6 +18,10 @@ interface ClusterResults {
 
 export type {DataObject, ClusterResults}
 
+export function calculateFuzzifier(dimensions,amount){
+
+}
+
 export default function({k, vectors, epsilon, fuzziness}:Partial<DataObject>):ClusterResults{
   var membershipMatrix = new Matrix(vectors.length, k);
   var repeat = true;
