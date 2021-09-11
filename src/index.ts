@@ -18,7 +18,10 @@ interface ClusterResults {
 
 export type {DataObject, ClusterResults}
 
-export function calculateFuzzifier(dimensions,amount){
+export function calculateFuzzifier(dimensions,amount){ // f(D,N)
+  // doi:10.1093/bioinformatics/btq534 - page 2845
+  // A simple and fast method to determine the parameters for fuzzy c–means cluster analysis
+  return 1+(1418/amount+22.05)*Math.pow(dimensions,-2)+(12.33/amount+0.243)*Math.pow(dimensions,-0.0406*Math.log(amount)-0.1134)
 
 }
 

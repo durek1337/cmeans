@@ -8,5 +8,6 @@ You can add this module to your project by this github repository while it's not
 ```
 npm install https://github.com/durek1337/cmeans
 ```
-
-##
+## Sources
+* Algorithm implementation by https://github.com/nantunes/figue
+* Fuzzier-Finder: A simple and fast method to determine the parameters for fuzzy c–means cluster analysis doi:10.1093/bioinformatics/btq534
