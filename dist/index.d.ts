@@ -10,4 +10,5 @@ interface ClusterResults {
     membershipMatrix: Matrix;
 }
 export type { DataObject, ClusterResults };
+export declare function calculateFuzzifier(dimensions: any, amount: any): number;
 export default function ({ k, vectors, epsilon, fuzziness }: Partial<DataObject>): ClusterResults;

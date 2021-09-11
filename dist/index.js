@@ -3,9 +3,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.calculateFuzzifier = void 0;
 const utils_1 = require("./utils");
 const euclidean_distance_1 = __importDefault(require("euclidean-distance"));
 const maxIterations = 3;
+function calculateFuzzifier(dimensions, amount) {
+    // doi:10.1093/bioinformatics/btq534 - page 2845
+    // A simple and fast method to determine the parameters for fuzzy c–means cluster analysis
+    return 1 + (1418 / amount + 22.05) * Math.pow(dimensions, -2) + (12.33 / amount + 0.243) * Math.pow(dimensions, -0.0406 * Math.log(amount) - 0.1134);
+}
+exports.calculateFuzzifier = calculateFuzzifier;
 function default_1({ k, vectors, epsilon, fuzziness }) {
     var membershipMatrix = new utils_1.Matrix(vectors.length, k);
     var repeat = true;
