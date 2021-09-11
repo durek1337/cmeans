@@ -1,5 +1,5 @@
 {
-  "name": "cmeans",
+  "name": "fcmeans",
   "version": "1.0.0",
   "description": "Calculating clusters with C-means algorithm",
   "main": "dist/index.js",
