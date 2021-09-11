@@ -9,5 +9,5 @@ interface ClusterResults {
     centroids: number[][];
     membershipMatrix: typeof Matrix;
 }
+export type { DataObject, ClusterResults };
 export default function ({ k, vectors, epsilon, fuzziness }: Partial<DataObject>): ClusterResults;
-export {};
