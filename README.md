@@ -38,7 +38,7 @@ var max = 10
 var min = 1
 var data_vectors = (new Array(amount)).fill(0).map((e,i) => (new Array(dimensions)).fill(0).map((e) => Math.round((max-min)*Math.random())+min))
 var clusters = Math.floor(Math.sqrt(amount))
-var fuzzifier = calculateFuzzifier(dimensions,amount)
+var fuzzifier = calculateFuzzifier(dimensions,amount) // you could also use a value of 2 but some people write it's not a good habbit. Inform yourself before you use this provided function.
 var result = fcmeans({k : clusters, vectors : data_vectors, epsilon : 0.0001, fuzziness : fuzzifier})
 console.log("fuzzifier",fuzzifier,"result",JSON.stringify(result))
 ```
