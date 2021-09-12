@@ -1,7 +1,7 @@
 {
   "name": "fcmeans",
   "version": "1.0.0",
-  "description": "Calculating clusters with C-means algorithm",
+  "description": "Calculating clusters with Fuzzy-C-means algorithm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
