@@ -38,7 +38,7 @@ var max = 10
 var min = 1
 var data_vectors = (new Array(amount)).fill(0).map((e,i) => (new Array(dimensions)).fill(0).map((e) => Math.round((max-min)*Math.random())+min))
 var clusters = Math.floor(Math.sqrt(amount))
-var fuzzifier = calculateFuzzifier(dimensions,amount) // you could also use a value of 2 but some people write it's not a good habbit. Inform yourself before you use this provided function.
+var fuzzifier = calculateFuzzifier(dimensions,amount) // you could also use a value of 2 but some people write it's not a good habbit. Inform yourself before you use this provided function. The fuzzifier in this example is far too high. In literature (example: doi 10.1109/TALE.2017.8252307 p76) the range of fuzzifier was suggested between 1.5 and 4 and came to the conclusion that the value of 2 is sufficient in most times.
 var result = fcmeans({k : clusters, vectors : data_vectors, epsilon : 0.0001, fuzziness : fuzzifier})
 console.log("fuzzifier",fuzzifier,"result",JSON.stringify(result))
 ```
@@ -60,3 +60,4 @@ The assignments in <code>result.membershipMatrix.mtx</code> has a length of 7 (w
 ## Sources
 * Algorithm implementation took in snippets from https://github.com/nantunes/figue
 * Fuzzier-Finder: A simple and fast method to determine the parameters for fuzzy c–means cluster analysis doi:10.1093/bioinformatics/btq534
+* Homogeneous group formation in collaborative learning using fuzzy C-means
