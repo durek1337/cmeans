@@ -9,11 +9,11 @@ Why using Fuzzy-C-means clustering algorithms in JavaScript/TypeScript? Yes, Jav
 ### Installing
 You can add this module to your project by this github repository while it's not published on npm.
 ```
-npm install https://github.com/durek1337/cmeans
+npm install https://github.com/durek1337/fcmeans
 ```
 or
 ```
-yarn add https://github.com/durek1337/cmeans
+yarn add https://github.com/durek1337/fcmeans
 ```
 
 ### Importing
@@ -60,4 +60,4 @@ The assignments in <code>result.membershipMatrix.mtx</code> has a length of 7 (w
 ## Sources
 * Algorithm implementation took in snippets from https://github.com/nantunes/figue
 * Fuzzier-Finder: A simple and fast method to determine the parameters for fuzzy c–means cluster analysis doi:10.1093/bioinformatics/btq534
-* Homogeneous group formation in collaborative learning using fuzzy C-means
+* Homogeneous group formation in collaborative learning using fuzzy C-means doi:10.1109/TALE.2017.8252307
